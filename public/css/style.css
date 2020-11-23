@@ -1,0 +1,154 @@
+.bg-dark2 {
+    background-color: #012a56;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+    font-size: 15px;
+}
+
+.pad {
+    padding: .7rem;
+}
+
+
+/* this style for student registration page */
+
+.container-fluid1 {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+
+/*
+input[type=text] {
+    width:;
+    border: 2px solid #e6e6e6; rgb(136, 132, 132);
+    border-radius: 3px; 
+    margin: 8px 0;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+     transition: ;
+} 
+*/
+
+input[type=text]:focus,
+input[type=date]:focus,
+input[type=password]:focus,
+input[type=number]:focus,
+input[type=email]:focus {
+    border-color: dodgerblue;
+    box-shadow: 0 0 2px 0 dodgerblue;
+}
+
+.textarea1:focus {
+    border-color: dodgerblue;
+    box-shadow: 0 0 3px 0 dodgerblue;
+}
+
+
+/* .bg-color1 {
+    background-color: #004085;
+}
+
+.bg-color1 .nav .f-color {
+    color: white;
+} */
+
+.pp {
+    padding: 0;
+    margin: 0;
+    height: 90vh;
+}
+
+.hr1 {
+    color: black;
+    border: 0;
+    border-top: 1px solid #0b7cec;
+}
+
+.lf-side {
+    background-color: rgb(88, 27, 123);
+    opacity: 0.9;
+    color: white;
+}
+
+.rg-side {
+    background-color: white;
+}
+
+.img {
+    width: 100px;
+    height: 70px;
+}
+
+
+/* for login pages */
+
+.pm {
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    padding-top: 5rem;
+}
+
+.bgcolor {
+    background-color: silver;
+    /* rgb(88, 27, 123); */
+    /* blue; */
+    opacity: 1;
+    /* height: 100vh; */
+    height: 90vh;
+}
+
+.bgl {
+    background-color: white;
+    opacity: 2;
+}
+
+.border_card {
+    border: 1px solid dodgerblue;
+}
+
+.bor {
+    border-bottom: ;
+}
+
+.container11 {
+    padding: 0;
+    margin: 0;
+    outline: 0;
+}
+
+.lf-side1 {
+    background-color: rgb(89, 47, 168);
+    opacity: 0.9;
+    color: white;
+    margin: 0;
+}
+
+.rg-side1 {
+    background-color: white;
+    opacity: 0.9;
+}
+
+.rg-side11 {
+    background-color: #fff;
+    opacity: 1;
+}
+
+.bor-rs {
+    border-radius: 0rem;
+}
+
+.sttr {
+    font-size: 40px;
+    color: white;
+    background: ;
+    border-radius: ;
+}
+
+.ct {}
