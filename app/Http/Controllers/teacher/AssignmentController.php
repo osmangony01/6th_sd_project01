@@ -4,6 +4,7 @@ namespace App\Http\Controllers\teacher;
 
 use App\Http\Controllers\Controller;
 use App\Models\Assignment;
+use App\Models\Question;
 use Illuminate\Http\Request;
 use Image;
 use Session;
@@ -41,7 +42,7 @@ class AssignmentController extends Controller
 
             $multi_img->save($imagePath.$saveImage);
 
-            $question = new Assignment();
+            $question = new Question();
             $question->course_code = $course_code;
             $question->group_name = $group_name;
             $question->question_set = $saveImage;

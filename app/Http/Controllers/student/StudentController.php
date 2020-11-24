@@ -4,6 +4,7 @@ namespace App\Http\Controllers\student;
 
 use App\Http\Controllers\Controller;
 use App\Models\Course;
+use App\Models\Enroll;
 use Illuminate\Http\Request;
 
 class StudentController extends Controller
@@ -15,13 +16,45 @@ class StudentController extends Controller
 
     public function myallcourse()
     {
-        return view('user.student.my_course');
+        $email = session('user3_email');
+        $course = Enroll::where('student_email','=',$email)->get();
+
+        return view('user.student.my_course',['courses'=>$course]);
+        //return view('user.student.my_course');
     }
 
     public function allcourse()
     {
         $c = Course::all();
         return view('user.student.all_course',['crs'=>$c]);
+    }
+
+    public function enroll($id)
+    {
+        $c = Course::find($id);
+
+        $enroll = new Enroll();
+
+        $name = session('user3_name');
+        $email = session('user3_email');
+
+        $ss = 'pending';  
+        
+        $enroll->student_name = $name;
+        $enroll->student_email = $email;
+        $enroll->instructor_name = $c->instructor;
+        $enroll->instructor_email = $c->instructor_email;
+        $enroll->course_title = $c->course_title;
+        $enroll->course_code = $c->course_code;
+        $enroll->pic = $c->pic;
+        $enroll->session = $c->session;
+        $enroll->status = $ss;
+
+        if($enroll->save()){
+            //return redirect()->back()->with('success','Updated Successfully!!');
+            return redirect()->to('/student/my-course');
+        }
+        
     }
 
     public function profile()

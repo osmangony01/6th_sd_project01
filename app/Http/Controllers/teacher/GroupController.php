@@ -7,6 +7,7 @@ use App\Models\Group;
 use Illuminate\Http\Request;
 use Session;
 use App\Models\Assignment;
+use App\Models\Question;
 
 class GroupController extends Controller
 {
@@ -38,7 +39,7 @@ class GroupController extends Controller
     public function specific_group($gp)
     {
         Session::put('gp_name',$gp);
-        $question = Assignment::where('group_name','=',$gp)->get();
+        $question = Question::where('group_name','=',$gp)->get();
         return view('user.teacher.course.view_group',['questions'=>$question]);
     }
 }

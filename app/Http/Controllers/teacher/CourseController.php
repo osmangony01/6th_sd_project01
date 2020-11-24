@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\SpecificSession;
 use App\Models\Course;
+use App\Models\Enroll;
 use Image;
 use Illuminate\Support\Facades\DB;
 use Session;
@@ -135,6 +136,14 @@ class CourseController extends Controller
     {
         $c = Course::find($id);
         return view('user.teacher.course.home',['course'=>$c]);
+    }
+
+    public function people()
+    {
+        $code = session('course_code');
+        //echo $email;
+        $all = Enroll::where('course_code','=',$code)->get();
+        return view('user.teacher.course.people',['people'=>$all]);
     }
 
 }

@@ -45,6 +45,8 @@ Route::group(['middleware' => 'checkstudentloggedin'], function(){
 
     Route::get('/student/all-course', 'student\StudentController@allcourse');
 
+    Route::get('/student/enroll-course/{id}', 'student\StudentController@enroll');
+
     Route::get('/student/contact', 'student\StudentController@contact');
     Route::post('/student/contact-us', 'student\StudentController@contact_us');
 
@@ -52,6 +54,8 @@ Route::group(['middleware' => 'checkstudentloggedin'], function(){
     Route::post('/student/profile_edit', 'student\StudentController@profile_edit');
 
     Route::get('/student/my-work', 'student\StudentController@mywork');
+
+    
 
 });
 
@@ -80,6 +84,9 @@ Route::group(['middleware' => 'checkteacherloggedin'], function(){
     // for question upload form
     Route::get('/teacher/course/question-upload', 'teacher\AssignmentController@show');
     Route::post('/teacher/question-save', 'teacher\AssignmentController@store');
+
+    // view specific course people
+    Route::get('/teacher/course/view-people', 'teacher\CourseController@people');
     
 });
 

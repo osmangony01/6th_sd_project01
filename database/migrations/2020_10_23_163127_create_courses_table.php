@@ -18,10 +18,10 @@ class CreateCoursesTable extends Migration
             $table->string('course_title');
             $table->string('course_code')->unique();
             $table->string('session');
-            $table->string('credit');
+            $table->string('credit')->nullable();
             $table->string('description')->nullable();
-            $table->string('instructor')->nullable();
-            $table->string('instructor_email')->nullable();
+            $table->string('instructor');
+            $table->string('instructor_email');
             $table->string('status')->nullable();
             $table->string('pic')->nullable();
             $table->string('price')->nullable();

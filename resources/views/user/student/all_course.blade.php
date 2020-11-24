@@ -17,7 +17,8 @@
                         <h4 class="card-title">{{ $c->course_title }}</h4>
                     </div>
                     <div class="card-footer">
-                        <a href="#" class="btn btn-outline-warning">Enroll</a>
+                        {{-- <a href="#" class="btn btn-outline-warning">Enroll</a> --}}
+                        <a href="{{ URL::to('student/enroll-course/'.$c->id) }}" class="btn btn-outline-warning">Enroll</a>
                     </div>
                     </div>
                 </div>

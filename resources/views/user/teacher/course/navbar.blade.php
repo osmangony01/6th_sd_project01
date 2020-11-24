@@ -12,7 +12,7 @@
           <a class="nav-link" href="{{ URL::to('teacher/course/group') }}">Group</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">People</a>
+          <a class="nav-link" href="{{ URL::to('teacher/course/view-people') }}">People</a>
         </li>
       </ul>
     </div>
