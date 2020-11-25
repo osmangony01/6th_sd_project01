@@ -543,3 +543,17 @@ input[type=number]:focus {
     padding-right: 5px;
     font-size: 30px;
 }
+
+.clr1 {
+    color: green;
+}
+
+.ff {
+    font-size: 18px;
+}
+
+.hh {}
+
+.bor-t {
+    border-left: 3px solid blue;
+}

@@ -40,7 +40,7 @@ Route::get('/logout', 'auth\LoginController@logout');
 //for student
 Route::group(['middleware' => 'checkstudentloggedin'], function(){
 
-    Route::get('/student/dashboard', 'student\StudentController@dashboard');
+    Route::get('/student/dashboard', 'student\StudentController@mywork');
     Route::get('/student/my-course', 'student\StudentController@myallcourse');
 
     Route::get('/student/all-course', 'student\StudentController@allcourse');
@@ -87,6 +87,11 @@ Route::group(['middleware' => 'checkteacherloggedin'], function(){
 
     // view specific course people
     Route::get('/teacher/course/view-people', 'teacher\CourseController@people');
+    Route::get('/teacher/course/approved/{id}', 'teacher\CourseController@approve');
+
+    Route::get('/teacher/course/work', 'teacher\CourseController@work');
+    Route::get('/teacher/course/assign-work', 'teacher\CourseController@create_work');
+
     
 });
 

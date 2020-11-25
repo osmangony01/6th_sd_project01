@@ -5,14 +5,18 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
-        <li class="nav-item active ">
-          <a class="nav-link" href="{{  URL::to('teacher/course/home/'.session('course_id'))}}">Home <span class="sr-only">(current)</span></a>
+        <li class="nav-item {{ Request::is('teacher/course/home/'.session('course_id')) ? 'active' : '' }}">
+          <a class="nav-link ff" href="{{  URL::to('teacher/course/home/'.session('course_id'))}}">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ URL::to('teacher/course/group') }}">Group</a>
+        <li class="nav-item {{ Request::is('teacher/course/group') ? 'active' : '' }}">
+          <a class="nav-link ff" href="{{ URL::to('teacher/course/group') }}">Group</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ URL::to('teacher/course/view-people') }}">People</a>
+       
+        <li class="nav-item {{ Request::is('teacher/course/work') ? 'active' : '' }}">
+          <a class="nav-link ff" href="{{ URL::to('teacher/course/work') }}">Work</a>
+        </li>
+        <li class="nav-item {{ Request::is('teacher/course/view-people') ? 'active' : '' }}">
+          <a class="nav-link ff" href="{{ URL::to('teacher/course/view-people') }}">People</a>
         </li>
       </ul>
     </div>

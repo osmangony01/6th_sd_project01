@@ -65,32 +65,14 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">{{ $g->group_name }}</h5>
-                                    <p >With supporting text below as a natural lead-in to additional content.</p>
+                                    <p ></p>
                                     <a href="{{ URL::to('teacher/course/specific-group/'.$g->group_name) }}" class="">View the question</a>
                                 </div>
                             </div>
                         </div>
                     @endforeach
                 </div>
-                        {{-- <div class="col-sm-4">
-                            <div class="card">
-                                <div class="card-body">
-                                  <h5 class="card-title">Specia</h5>
-                                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                  <a href="#" class="btn btn-primary">Clcik here</a>
-                                </div>
-                            </div>
-                        </div> --}}
-                        {{-- <div class="col-sm-4">
-                            <div class="card">
-                               <div class="card-body">
-                                <h5 class="card-title">Special title treatment</h5>
-                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                <a href="#" class="btn btn-primary">Clcik here</a>
-                               </div>
-                            </div>
-                        </div> --}}
-                    
+                        
                 </div>
             </div>
         </div>

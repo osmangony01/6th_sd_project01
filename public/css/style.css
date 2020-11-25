@@ -156,3 +156,7 @@ input[type=email]:focus {
 .clr {
     color: red;
 }
+
+.clr1 {
+    color: green;
+}

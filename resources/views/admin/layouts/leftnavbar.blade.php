@@ -74,7 +74,7 @@
                       <img src="{{ asset('uploads/profile/avatar04.png') }}" class="img-circle img1" alt="User Image">
                     </div>
                     <div class="pull-left info">
-                      <p>Alexander Pierce</p>
+                      <p>{{ session('user_name') }}</p>
                       <p class="info1">Administrator</p>
                     </div>
                 </div>
@@ -100,7 +100,7 @@
                     </nav>
                 </div>
 
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                {{-- <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                     <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                     Layouts
                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
@@ -115,8 +115,8 @@
                     <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                     Pages
                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                </a>
-                <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
+                </a> --}}
+                {{-- <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
                         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
                             Authentication
@@ -141,7 +141,7 @@
                             </nav>
                         </div>
                     </nav>
-                </div>
+                </div> --}}
             </div>        
         </div>  
     </nav>

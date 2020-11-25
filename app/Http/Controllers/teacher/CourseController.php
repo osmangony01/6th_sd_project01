@@ -3,10 +3,13 @@
 namespace App\Http\Controllers\teacher;
 
 use App\Http\Controllers\Controller;
+use App\Models\Assignment;
 use Illuminate\Http\Request;
 use App\Models\SpecificSession;
 use App\Models\Course;
 use App\Models\Enroll;
+use App\Models\Group;
+use App\Models\Question;
 use Image;
 use Illuminate\Support\Facades\DB;
 use Session;
@@ -145,5 +148,66 @@ class CourseController extends Controller
         $all = Enroll::where('course_code','=',$code)->get();
         return view('user.teacher.course.people',['people'=>$all]);
     }
+
+    public function approve($id)
+    {
+        $s_id = Enroll::find($id);
+
+        $s_id->status = "approved";
+
+        if($s_id->save()){
+            return redirect()->back();
+            
+         }
+    }
+
+    public function work()
+    {
+        return view('user.teacher.course.work');
+    }
+
+    public function generate_assignment($s_email,$cname , $question)
+    {
+       
+        
+        foreach($question as $q)
+        {
+            $asn = new  Assignment();
+            $asn->question_set = $q->question_set;
+            $asn->student_email = $s_email;
+            $asn->course_code = $q->course_code;
+            $asn->course_name = $cname;
+            
+
+            $asn->save();
+            
+        }
+        
+    }
+
+    public function create_work()
+    {
+        $code = session('course_code');
+        $cname = session('course_name');
+
+        
+        $s = Enroll::where('course_code','=',$code)->get();
+
+        $count = Group::where('course_code','=',$code)->count();
+        
+        //echo $count;
+        foreach($s as  $item)
+        {       
+            $s_email = $item->student_email;
+            $question = Question::where('course_code','=',$code)->inRandomOrder()->limit($count)->get();
+
+            $this->generate_assignment($s_email,$cname , $question);
+            
+        }
+       
+        return redirect()->back();
+
+    }
+   
 
 }

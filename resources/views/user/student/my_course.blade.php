@@ -19,7 +19,12 @@
                     <div class="card-footer">
                         {{-- <a href="#" class="btn btn-outline-warning">Enroll</a> --}}
                         {{-- <a href="{{ URL::to('student/enroll-course/'.$c->id) }}" class="btn btn-outline-warning">Enroll</a> --}}
-                        <p class="m-0 p-0 float-right clr">{{  $c->status }}</p>
+                       
+                        @if ($c->status == "pending")
+                            <p class="m-0 p-0 float-right clr">{{  $c->status }}</p>
+                        @else
+                            <p class="m-0 p-0 float-right clr1">{{  $c->status }}</p> 
+                        @endif
                     </div>
                     </div>
                 </div>

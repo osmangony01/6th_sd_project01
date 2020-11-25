@@ -6,34 +6,34 @@
         <div class="card hh1">
             <div class="card-body">
                 @include('user.teacher.course.navbar')
-                <div class="row p-3">
-                    <div>
-                        <p>Teacher</p>
-                        <hr>
-                        <p>{{ session('user2_name') }}</p>
-                        <p>{{ session('user2_email') }}</p>
-                    </div>
-                    <table class="table table-hover">
+                <div class="row p-3 pl-2">
+                    <h3>All Student</h3>
+                    <table class="table table-hover ">
                         <thead>
                             <tr>
-                                <th>Student</th>
+                                <th scope="col">#</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            
-                            <hr>
+                            <?php $c=1; ?>
                             @foreach ($people as $s)
+                              
                                 <tr>
-                                    <td>
-                                        <p>{{ $s->student_name }}</p>
-                                        <p>{{ $s->student_email }}</p>
+                                    <td><?php  echo $c++;  ?></td>
+                                    <td>{{ $s->student_name }}  </td>
+                                    <td>{{ $s->student_email }}</td>
+                                    <td> 
                                         @if ($s->status == 'pending')
-                                            <a href="#" class="btn btn-primary btn-sm" role="button" aria-pressed="true">approve</a>
+                                            <a href="{{ URL::to('teacher/course/approved/'.$s->id) }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true">approve</a>
                                         @else
-
+                                            <p class="clr1 p-0 m-0">approved</p>
                                         @endif
                                     </td>
                                 </tr>
+                               
                             @endforeach
                         </tbody>
                     </table> 

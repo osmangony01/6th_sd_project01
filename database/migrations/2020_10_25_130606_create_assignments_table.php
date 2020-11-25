@@ -17,6 +17,7 @@ class CreateAssignmentsTable extends Migration
             $table->id();
             $table->string('student_email');
             $table->string('course_code');
+            $table->string('course_name');
             $table->string('question_set');
             $table->string('status')->nullable();
             $table->timestamps();

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\student;
 
 use App\Http\Controllers\Controller;
+use App\Models\Assignment;
 use App\Models\Course;
 use App\Models\Enroll;
 use Illuminate\Http\Request;
@@ -69,7 +70,11 @@ class StudentController extends Controller
 
     public function mywork()
     {
-        return view('user.student.activity');
+        $email = session('user3_email');
+        $q = Assignment::where('student_email','=',$email)->get();
+
+        //return view('user.student.activity');
+        return view('user.student.activity',['question'=>$q]);
     }
 
 
