@@ -11,60 +11,28 @@
         </header>
 
         <!-- Page Features -->
-        <div class="row text-center rg-side1 m-0 pt-5 ">
-
-            <div class="rg-side11 col-lg-3 col-md-6 mb-4">
-                <div class="card h-100">
-                <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+        <div class="row  m-0 p-0">
+            <div class="card m-0 p-0">
                 <div class="card-body ">
-                    <h4 class="card-title">Card title</h4>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-                </div>
-                <div class="card-footer">
-                    <a href="#" class="btn btn-primary">Find Out More!</a>
-                </div>
-                </div>
+                    <h2>About Us</h2>
+                    <div class="row">
+                        <div class="col-md-6 ">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus optio, quos adipisci quibusdam accusamus molestiae, eligendi deleniti quae quam laborum maxime consequuntur fuga est, quod possimus atque maiores perspiciatis repellendus.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus optio, quos adipisci quibusdam accusamus molestiae, eligendi deleniti quae quam laborum maxime consequuntur fuga est, quod possimus atque maiores perspiciatis repellendus.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus optio, quos adipisci quibusdam accusamus molestiae, eligendi deleniti quae quam laborum maxime consequuntur fuga est, quod possimus atque maiores perspiciatis repellendus.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus optio, quos adipisci quibusdam accusamus molestiae, eligendi deleniti quae quam laborum maxime consequuntur fuga est, quod possimus atque maiores perspiciatis repellendus.
+                            </p>
+                            
+                        </div>
+                        <div class="col-md-6 ">
+                            
+                            <img class="img-fluid" src="{{ asset('uploads/home/pic9.jpg') }}" alt="imgae">
+                               
+                        </div>
+                    </div>      
+                </div>       
+            
             </div>
-
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100">
-                <img class="card-img-top" src="http://placehold.it/500x325" alt="">
-                <div class="card-body">
-                    <h4 class="card-title">Card title</h4>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
-                </div>
-                <div class="card-footer">
-                    <a href="#" class="btn btn-primary">Find Out More!</a>
-                </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100">
-                <img class="card-img-top" src="http://placehold.it/500x325" alt="">
-                <div class="card-body">
-                    <h4 class="card-title">Card title</h4>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-                </div>
-                <div class="card-footer">
-                    <a href="#" class="btn btn-primary">Find Out More!</a>
-                </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100">
-                <img class="card-img-top" src="http://placehold.it/500x325" alt="">
-                <div class="card-body">
-                    <h4 class="card-title">Card title</h4>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
-                </div>
-                <div class="card-footer">
-                    <a href="#" class="btn btn-primary">Find Out More!</a>
-                </div>
-                </div>
-            </div>
-
         </div>
         <!-- /.row -->
     </div>

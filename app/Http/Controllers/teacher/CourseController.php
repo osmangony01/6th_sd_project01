@@ -195,7 +195,8 @@ class CourseController extends Controller
 
         $count = Group::where('course_code','=',$code)->count();
         
-        //echo $count;
+        //$count=$count-1;
+
         foreach($s as  $item)
         {       
             $s_email = $item->student_email;
